@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Universal Digital Store</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Browse Products</a></li>
+                <li><a href="/orders">My Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Payment Details</h2>
+        <p>Please send <strong>{{ amount }} XMR</strong> to the following address:</p>
+        <p><strong>{{ address }}</strong></p>
+        <p>Once the payment is confirmed, you will receive your product.</p>
+        <a href="/">Back to Home</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Universal Digital Store</p>
+    </footer>
+</body>
+</html>

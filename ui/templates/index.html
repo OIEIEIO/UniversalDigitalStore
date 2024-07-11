@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Digital Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Universal Digital Store</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Browse Products</a></li>
+                <li><a href="/orders">My Orders</a></li>
+                <li><a href="/purchased_products">Purchased Products</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="products">
+            <h2>Featured Products</h2>
+            <div class="product-list">
+                {% for product_id, product in products.items() %}
+                    <div class="product">
+                        <h3>{{ product.name }}</h3>
+                        <p>Price: {{ product.price }} XMR</p>
+                        <form action="{{ url_for('order_bp.place_order') }}" method="post">
+                            <input type="hidden" name="product_id" value="{{ product_id }}">
+                            <button class="buy-button" type="submit">Buy</button>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Connection Status: {{ status }}</p>
+        {% if status == 'Connected' %}
+            <p class="connected">Block Height: {{ block_height }} | Timestamp: {{ timestamp }}</p>
+        {% endif %}
+        <form method="post" action="/connect_wallet">
+            <button class="connect-button" type="submit">Connect to Store</button>
+        </form>
+        <p>&copy; 2024 Universal Digital Store</p>
+    </footer>
+</body>
+</html>

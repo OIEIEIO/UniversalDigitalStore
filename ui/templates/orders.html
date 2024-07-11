@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .confirmations-cell {
+            text-align: center;
+        }
+        .processing {
+            background-color: orange;
+        }
+        .confirmed {
+            background-color: green;
+        }
+        .canceled {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Universal Digital Store</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Browse Products</a></li>
+                <li><a href="/orders">My Orders</a></li>
+                <li><a href="/purchased_products">Purchased Products</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>My Orders</h2>
+        <div id="orders">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Amount</th>
+                        <th>Payment Address</th>
+                        <th class="confirmations-cell">Confirmations</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr class="{{ 'confirmed' if order.confirmations >= 5 else ('canceled' if order.canceled else 'processing') }}">
+                        <td>{{ order.product_name }}</td>
+                        <td>{{ order.product_price }}</td>
+                        <td>{{ order.payment_address }}</td>
+                        <td class="confirmations-cell">{{ order.confirmations }}/5</td>
+                        <td>{{ 'Confirmed' if order.confirmations >= 5 else ('Canceled' if order.canceled else 'Processing') }}</td>
+                        <td>
+                            {% if order.confirmations == 0 and not order.canceled %}
+                            <form action="{{ url_for('order_bp.cancel_order') }}" method="post">
+                                <input type="hidden" name="order_id" value="{{ order.id }}">
+                                <button type="submit">Cancel</button>
+                            </form>
+                            {% elif order.confirmations >= 5 %}
+                            <button onclick="window.location.href='{{ url_for('order_bp.download_file', order_id=order.id) }}'" class="download-button">Download Files</button>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Universal Digital Store</p>
+    </footer>
+    <script src="{{ url_for('static', filename='orders.js') }}"></script>
+</body>
+</html>

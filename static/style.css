@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1c1c1c;
+    color: #6babc3;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3.0em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 80px;
+}
+
+.product {
+    background-color: #1c1c1c;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: calc(33.333% - 20px);
+    color: #e0e0e0;
+}
+
+.product h3 {
+    margin-top: 0;
+}
+
+.product form {
+    margin-top: 10px;
+}
+
+.buy-button {
+    background-color: #4d574d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buy-button:hover {
+    background-color: #45a049;
+}
+
+.connect-button {
+    background-color: #4d49428e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.connect-button:hover {
+    background-color: #44d54e;
+}
+
+#connection-status {
+    margin-top: 10px;
+}
+
+#connection-status p {
+    margin: 5px 0;
+}
+
+#orders, #purchased-products {
+    margin-top: 20px;
+}
+
+#orders table, #purchased-products table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#orders th, #orders td, #purchased-products th, #purchased-products td {
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+#orders th, #purchased-products th {
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+#orders tr.processing {
+    background-color: #ff9800;
+    color: #000000;
+}
+
+#orders tr.confirmed, #purchased-products tr.confirmed {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+#orders tr.canceled {
+    background-color: #ff4d4d;
+    color: #ffffff;
+}
+
+#orders tr.no-confirmations {
+    background-color: transparent; /* No background for 0/5 */
+    color: inherit;
+}
+
+.cancel-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.cancel-button:hover {
+    background-color: #ff1a1a;
+}
+
+.download-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.download-table th,
+.download-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.download-table th {
+    background-color: #d14040;
+    text-align: left;
+}
+
+.download-button-download {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.download-button:hover {
+    background-color: #5acf5f;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Downloads</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Universal Digital Store</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Browse Products</a></li>
+                <li><a href="/orders">My Orders</a></li>
+                <li><a href="/purchased_products">Purchased Products</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Downloads for Order #</h2>
+        <h3>{{ address }}</h3>
+        <table class="download-table">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Size</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in files %}
+                <tr>
+                    <td>{{ file.filename }}</td>
+                    <td>{{ file.size }}</td>
+                    <td><a href="{{ file.link }}" class="download-button-download">Download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Universal Digital Store</p>
+    </footer>
+</body>
+</html>
