@@ -7,7 +7,6 @@ import os
 
 order_bp = Blueprint('order_bp', __name__)
 
-
 def human_readable_size(size):
     """Convert size in bytes to a human-readable format."""
     for unit in ['bytes', 'KB', 'MB', 'GB', 'TB']:
@@ -24,7 +23,6 @@ def place_order():
 
     address = create_subaddress(product['name'])
     amount = product['price']
-    download_link = f'product-{product_id}'  # Ensure download link is set properly
 
     # Save the order in the database
     session = SessionLocal()
@@ -33,8 +31,7 @@ def place_order():
             product_id=product_id,
             product_name=product['name'],
             product_price=amount,
-            payment_address=address,
-            download_link=download_link  # Set the download link
+            payment_address=address
         )
         session.add(new_order)
         session.commit()
@@ -161,43 +158,32 @@ def download_file(order_id):
     session = SessionLocal()
     try:
         order = session.query(Order).filter(Order.id == order_id).first()
-        print(f"Order details for order_id {order_id}: {order}")
     except Exception as e:
         print(f"Error fetching order for download {order_id}: {e}")
         return "Internal server error", 500
     finally:
         session.close()
 
-    if order:
-        print(f"Order found: {order}")
-        if order.confirmations >= 5:
-            print(f"Order confirmed with {order.confirmations} confirmations")
-            if order.download_link:
-                print(f"Download link found: {order.download_link}")
-                product_folder = os.path.join('downloads', order.download_link)
-                if os.path.isdir(product_folder):
-                    files = os.listdir(product_folder)
-                    print(f"Files in product folder: {files}")
-                    file_links = [
-                        {
-                            'filename': file,
-                            'link': url_for('order_bp.send_file', order_id=order_id, filename=file),
-                            'size': os.path.getsize(os.path.join(product_folder, file))
-                        }
-                        for file in files
-                    ]
-                    return render_template('download_page.html', files=file_links)
-                else:
-                    print(f"Product folder not found: {product_folder}")
-                    return "Product folder not found.", 404
+    if order and order.confirmations >= 5 and order.download_link:
+        try:
+            product_folder = os.path.join('downloads', order.download_link)
+            if os.path.isdir(product_folder):
+                files = os.listdir(product_folder)
+                file_links = [
+                    {
+                        'filename': file,
+                        'size': human_readable_size(os.path.getsize(os.path.join(product_folder, file))),
+                        'link': url_for('order_bp.send_file', order_id=order_id, filename=file)
+                    }
+                    for file in files
+                ]
+                return render_template('download_page.html', files=file_links, address=order.payment_address)
             else:
-                print("No download link found for order.")
-                return "File not found or order not confirmed.", 404
-        else:
-            print(f"Order not confirmed. Current confirmations: {order.confirmations}")
+                return "Product folder not found.", 404
+        except Exception as e:
+            print(f"Error sending file for order {order_id}: {e}")
             return "File not found or order not confirmed.", 404
     else:
-        print(f"Order with ID {order_id} not found.")
         return "File not found or order not confirmed.", 404
 
 @order_bp.route('/send_file/<int:order_id>/<filename>', methods=['GET'])
@@ -205,7 +191,6 @@ def send_file(order_id, filename):
     session = SessionLocal()
     try:
         order = session.query(Order).filter(Order.id == order_id).first()
-        print(f"Order details for sending file, order_id {order_id}: {order}")
     except Exception as e:
         print(f"Error fetching order for download {order_id}: {e}")
         return "Internal server error", 500
@@ -215,11 +200,9 @@ def send_file(order_id, filename):
     if order and order.confirmations >= 5 and order.download_link:
         try:
             directory = os.path.join(os.getcwd(), 'downloads', order.download_link)
-            print(f"Sending file from directory: {directory}, filename: {filename}")
             return send_from_directory(directory, filename, as_attachment=True)
         except Exception as e:
             print(f"Error sending file {filename} for order {order_id}: {e}")
             return "File not found or order not confirmed.", 404
     else:
-        print(f"Order not confirmed or no download link. Confirmations: {order.confirmations}, Download link: {order.download_link}")
         return "File not found or order not confirmed.", 404
