@@ -31,7 +31,8 @@ def place_order():
             product_id=product_id,
             product_name=product['name'],
             product_price=amount,
-            payment_address=address
+            payment_address=address,
+            download_link=download_link
         )
         session.add(new_order)
         session.commit()
