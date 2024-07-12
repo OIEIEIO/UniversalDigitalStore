@@ -11,7 +11,7 @@ def human_readable_size(size):
     """Convert size in bytes to a human-readable format."""
     for unit in ['bytes', 'KB', 'MB', 'GB', 'TB']:
         if size < 1024:
-            return f"{size} {unit}"
+            return f"{size:.2f} {unit}"
         size /= 1024
 
 @order_bp.route('/place_order', methods=['POST'])
@@ -23,6 +23,7 @@ def place_order():
 
     address = create_subaddress(product['name'])
     amount = product['price']
+    download_link = f"product-{product_id}"
 
     # Save the order in the database
     session = SessionLocal()
@@ -173,12 +174,12 @@ def download_file(order_id):
                 file_links = [
                     {
                         'filename': file,
-                        'size': human_readable_size(os.path.getsize(os.path.join(product_folder, file))),
-                        'link': url_for('order_bp.send_file', order_id=order_id, filename=file)
+                        'link': url_for('order_bp.send_file', order_id=order_id, filename=file),
+                        'size': human_readable_size(os.path.getsize(os.path.join(product_folder, file)))
                     }
                     for file in files
                 ]
-                return render_template('download_page.html', files=file_links, address=order.payment_address)
+                return render_template('download_page.html', files=file_links, order_id=order.payment_address)
             else:
                 return "Product folder not found.", 404
         except Exception as e:
