@@ -188,7 +188,6 @@ def download_file(order_id):
     else:
         return "File not found or order not confirmed.", 404
 
-
 @order_bp.route('/send_file/<int:order_id>/<filename>', methods=['GET'])
 def send_file(order_id, filename):
     session = SessionLocal()
