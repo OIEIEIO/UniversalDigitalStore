@@ -179,7 +179,7 @@ def download_file(order_id):
                     }
                     for file in files
                 ]
-                return render_template('download_page.html', files=file_links, order_id=order.payment_address)
+                return render_template('download_page.html', files=file_links, order_id=order_id, address=order.payment_address)
             else:
                 return "Product folder not found.", 404
         except Exception as e:
@@ -187,6 +187,7 @@ def download_file(order_id):
             return "File not found or order not confirmed.", 404
     else:
         return "File not found or order not confirmed.", 404
+
 
 @order_bp.route('/send_file/<int:order_id>/<filename>', methods=['GET'])
 def send_file(order_id, filename):
