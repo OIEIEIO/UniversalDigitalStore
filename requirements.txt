@@ -3,3 +3,5 @@ requests
 python-dotenv
 flask_sqlalchemy
 flask_migrate
+flask-login
+bcrypt
