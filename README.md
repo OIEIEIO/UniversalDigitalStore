@@ -10,6 +10,61 @@
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20134120.png)
 
 ## Description
+# Universal Digital Store
+
+The Universal Digital Store is a comprehensive e-commerce platform designed for the digital age. This application allows users to purchase digital products securely and privately using Monero. The app not only sells various digital products but also offers the unique opportunity to resell the app itself, providing a robust global e-commerce solution.
+
+## Features
+
+- **Front End:** Built with HTML, CSS, and JavaScript for a responsive and user-friendly interface.
+- **Back End:** Powered by Flask, a lightweight WSGI web application framework for Python.
+- **Database:** Uses SQLite for storing product information, orders, and payment details.
+- **Payment System:** Integrated with Monero's network for secure, private, and decentralized transactions.
+
+## How It Works
+
+### Front End
+
+The front end of the Universal Digital Store is designed to be simple and intuitive. It includes the following pages:
+
+- **Home Page:** Browse available products.
+- **My Orders:** View and manage your current orders.
+- **Purchased Products:** Access products you have already purchased and confirmed.
+
+### Back End
+
+The back end is built with Flask, providing the core logic for the application. The main components include:
+
+- **Routes:** Define the different endpoints for the application.
+- **Order Management:** Handles placing orders, checking confirmations, and downloading products.
+- **Database Interaction:** Manages data storage and retrieval using SQLAlchemy for ORM (Object Relational Mapping).
+
+### Database
+
+The application uses SQLite for data storage. The database schema includes tables for:
+
+- **Products:** Information about the digital products available for purchase.
+- **Orders:** Tracks orders placed by users, including payment status and download links.
+
+### Payment System
+
+Payments are processed using Monero, ensuring secure and private transactions. The app checks for payment confirmations and updates order status accordingly.
+
+## Usage
+
+- **Browse Products:** Navigate to the home page to view available products.
+- **Place an Order:** Select a product and follow the prompts to complete your purchase using Monero.
+- **View Orders:** Check the "My Orders" page to see the status of your orders.
+- **Download Products:** Once payment is confirmed, download your purchased products from the "Purchased Products" page.
+
+## Customization
+
+The Universal Digital Store can be customized to fit your specific needs. Choose from standard or advanced versions to allow for further customization, including adding new product categories and integrating additional payment methods.
+
+## Resell the App
+
+By hosting and deploying the Universal Digital Store, you can resell the app itself, creating an additional revenue stream. This feature allows you to offer a global e-commerce solution to other users.
+
 
 Why Universal Digital Store Sells Itself
 In an increasingly digital world, having a robust and versatile e-commerce platform is essential for reaching a global audience. The Universal Digital Store is designed to not only sell a variety of digital products but also to empower you to create your own global e-commerce presence.
