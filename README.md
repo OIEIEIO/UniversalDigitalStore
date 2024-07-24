@@ -7,6 +7,8 @@
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20124937.png)
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20125002.png)
 
+![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20134120.png)
+
 ## Description
 
 Why Universal Digital Store Sells Itself
