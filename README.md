@@ -43,12 +43,6 @@ This version highlights the ability to resell the app and the customization opti
 
 ```./monero-wallet-rpc --rpc-bind-ip 0.0.0.0 --rpc-bind-port 18088 --confirm-external-bind --daemon-address 127.0.0.1:18081 --log-file /wallet_rpc.log --disable-rpc-login --wallet-dir ./wallets```
 
-## Contributing
-We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Contact
 For any questions or feedback, please reach out to [support@oieieio.net].
 
