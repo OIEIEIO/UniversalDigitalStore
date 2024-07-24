@@ -114,4 +114,11 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
-For any questions or feedback, please reach out to [yourname@example.com].
+For any questions or feedback, please reach out to [support@oieieio.net].
+
+Donate
+If you find this project useful and would like to support its development, please consider donating to the following cryptocurrency addresses:
+
+Monero (XMR): 45fEZ996KubUBfYH3n5jTSJqWcqscwZsJYFFHRbwM4wNGLcV4g3ABZ2eZs9VwJoGBAPAbCRrDw4qEK8hmb2BzMkE6JcBYXj
+
+Thank you for your support!
