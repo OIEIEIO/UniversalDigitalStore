@@ -1,4 +1,3 @@
-# UniversalDigitalStore
 
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20124219.png)
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20150155.png)
