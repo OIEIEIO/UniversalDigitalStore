@@ -1,4 +1,4 @@
-This is browse products page 
+This is browse products page - Buy something
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20124219.png)
 This is after you click buy button
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20150155.png)
