@@ -29,9 +29,6 @@ When you buy the Universal Digital Store, you’re not just purchasing software;
 ### Empower Your Business
 Deploying the Universal Digital Store means you have a powerful e-commerce tool at your fingertips. It’s designed to be easy to set up, manage, and scale, allowing you to focus on what matters most: growing your business and reaching new customers. By purchasing and hosting the app, you open the door to reselling the store, thus expanding your business opportunities even further.
 
-This version highlights the ability to resell the app and the customization options, providing clarity on how deploying the Universal Digital Store can create new opportunities for your business.
-
-## Features
 - List available digital products
 - Place and track orders
 
