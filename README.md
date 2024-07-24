@@ -1,5 +1,13 @@
 # UniversalDigitalStore
 
+![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20124219.png)
+![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20150155.png)
+![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20122747.png)
+![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20122817.png)
+![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20122855.png)
+![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20124937.png)
+![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20125002.png)
+
 Why Universal Digital Store Sells Itself
 In an increasingly digital world, having a robust and versatile e-commerce platform is essential for reaching a global audience. The Universal Digital Store is designed to not only sell a variety of digital products but also to empower you to create your own global e-commerce presence.
 
@@ -85,28 +93,6 @@ This version highlights the ability to resell the app and the customization opti
    ```bash
    flask run
    ```
-
-## Roadmap
-
-### Version 1.0.0: Basic Functionality
-- Wallet Management: Create and open wallets, check balance
-- Product Management: List products, get product details
-- Order Management: Place orders
-
-### Version 1.1.0: Enhanced Transaction Tracking and Logging
-- Track Pending Transactions
-- View Completed Orders
-- Add comprehensive logging
-
-### Version 1.2.0: User Interface Improvements and Additional Features
-- Improved UI for better user experience
-- Ability to create new products
-
-### Version 2.0.0: Major Overhaul and New Features
-- New major features
-- Significant changes to existing functionalities
-- Potential backward-incompatible changes
-
 ## Contributing
 We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
