@@ -66,7 +66,7 @@ The Universal Digital Store can be customized to fit your specific needs. Choose
 By hosting and deploying the Universal Digital Store, you can resell the app itself, creating an additional revenue stream. This feature allows you to offer a global e-commerce solution to other users.
 
 
-Why Universal Digital Store Sells Itself
+Why Universal Digital Store Sells Itself. 
 In an increasingly digital world, having a robust and versatile e-commerce platform is essential for reaching a global audience. The Universal Digital Store is designed to not only sell a variety of digital products but also to empower you to create your own global e-commerce presence.
 
 The Concept
