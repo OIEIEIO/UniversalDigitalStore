@@ -36,8 +36,6 @@ This version highlights the ability to resell the app and the customization opti
 - List available digital products
 - Place and track orders
 
-## Installation
-
 ### Prerequisites
 - Ubuntu 20.04 or later
 - Python 3.8 or later
