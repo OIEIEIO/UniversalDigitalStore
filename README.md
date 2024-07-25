@@ -12,7 +12,7 @@ Download page - from confirmed transaction - click download link
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20125002.png)
 Flask backend - starting app
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20134120.png)
-Feather Wallet app - wallet on the right is store wallet - you do the math on fees - you see transaction times
+Feather Wallet app - wallet on the right is store wallet - you do the math on fees - transaction times
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20161620.png)
 ## Description
 # Universal Digital Store
