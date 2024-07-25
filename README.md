@@ -1,16 +1,16 @@
-This is browse products page - start by clicking the connect button, wait about 30 seconds to connect - then Buy something
+Browse Products page - start by clicking the Connect to Store button - wait about 30 seconds to connect - then Buy something
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20124219.png)
 This is after you click buy button
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20150155.png)
-This is your orders page, orders can be cancelled at any time until first payment, Cancelled orders disappear in about 20 seconds
+My Orders page - orders can be cancelled at any time until first payment, Cancelled orders disappear in about 20 seconds
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20122817.png)
-Orders page after 1 confirmation turns orange - notice the cancel button disaappears after one confirmation
+My Orders page - after 1 confirmation turns orange - notice the cancel button disaappears after one confirmation
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20122855.png)
-Orders page after 5 confirmations turns green - Download link appears
+My Orders page - after 5 confirmations turns green - Download link appears
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20124937.png)
-Download page from confirmed transaction - click download link
+Download page - from confirmed transaction - click download link
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20125002.png)
-Flask backend starting app
+Flask backend - starting app
 ![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20134120.png)
 
 ## Description
