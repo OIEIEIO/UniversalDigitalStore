@@ -187,9 +187,3 @@ Improve database management for production environments.
 
 ## Contact
 For any questions or feedback, please reach out to [support@oieieio.net].
-
-Donate addresses:
-
-Monero (XMR): 45fEZ996KubUBfYH3n5jTSJqWcqscwZsJYFFHRbwM4wNGLcV4g3ABZ2eZs9VwJoGBAPAbCRrDw4qEK8hmb2BzMkE6JcBYXj
-
-Thank you for your support!
