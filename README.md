@@ -101,6 +101,90 @@ Deploying the Universal Digital Store means you have a powerful e-commerce tool 
 
 ```./monero-wallet-rpc --rpc-bind-ip 0.0.0.0 --rpc-bind-port 18088 --confirm-external-bind --daemon-address 127.0.0.1:18081 --log-file /wallet_rpc.log --disable-rpc-login --wallet-dir ./wallets```
 
+# **UniversalDigitalStore**
+
+A Flask-based digital store with Monero payment integration.
+
+---
+
+## **Setup and Run Instructions**
+
+### **1. Clone the Repository**
+
+Clone the project from GitHub:
+```
+git clone https://github.com/OIEIEIO/UniversalDigitalStore.git
+cd UniversalDigitalStore
+```
+
+2. Set Up a Virtual Environment
+To isolate dependencies, create and activate a virtual environment:
+
+Create the Virtual Environment:
+
+```
+python3 -m venv venv
+```
+Activate the Virtual Environment:
+```
+source venv/bin/activate
+```
+Verify Activation: The terminal prompt will show (venv).
+
+3. Install Dependencies
+Install the required dependencies:
+```
+pip install -r requirements.txt
+```
+
+4. Fix the Import Path
+The project expects a package named UniversalDigitalStore. To resolve this:
+
+Create a Symlink:
+```
+ln -s . UniversalDigitalStore
+```
+Set the PYTHONPATH Environment Variable:
+```
+export PYTHONPATH=$(pwd)
+```
+5. Initialize the Database
+If this is your first time running the project, initialize the database:
+```
+python scripts/initialize_db.py
+```
+6. Run the Flask Application
+Start the development server:
+```
+python run.py
+```
+By default, the app will run on:
+```
+URL: http://127.0.0.1:5000
+```
+Quick Setup Checklist
+- Clone the repository ✅
+- Set up and activate the virtual environment ✅
+- Install all dependencies ✅
+- Fix the Python import path ✅
+- Initialize the database ✅
+- Run the Flask application ✅
+
+  
+Development Notes
+Dependencies: Make sure to activate the virtual environment before running any Python commands.
+
+Debug Mode: This app runs in debug mode for development purposes. Use a production-ready WSGI server like gunicorn for deployment.
+
+Static Assets: Ensure the static/ folder contains all required files (e.g., style.css, favicon.ico).
+
+## Future Enhancements
+
+Add production deployment instructions using gunicorn or uWSGI.
+
+Improve database management for production environments.
+
+
 ## Contact
 For any questions or feedback, please reach out to [support@oieieio.net].
 
