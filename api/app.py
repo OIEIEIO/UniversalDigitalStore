@@ -46,7 +46,7 @@ def create_app():
 
     @app.route('/connect_wallet', methods=['POST'])
     def connect_wallet():
-        wallet_name = "test0"
+        wallet_name = "wallet1"
         wallet_password = "1234"
         open_wallet(wallet_name, wallet_password)
 
