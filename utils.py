@@ -1,7 +1,7 @@
 import requests
 
 def rpc_request(method, params=None):
-    url = "http://xmr.oieieio.net:18088/json_rpc"
+    url = "http://127.0.0.1:18088/json_rpc"
     headers = {"Content-Type": "application/json"}
     payload = {
         "jsonrpc": "2.0",
