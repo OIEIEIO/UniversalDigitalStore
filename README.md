@@ -1,5 +1,9 @@
 
-# Universal Digital Store
+# Universal Digital Store 
+
+A Flask-based digital store with Monero payment integration.
+
+---
 
 The Universal Digital Store is a comprehensive e-commerce platform designed for the digital age. This application allows users to purchase digital products securely and privately using Monero. The app not only sells various digital products but also offers the unique opportunity to resell the app itself, providing a robust global e-commerce solution.
 
@@ -61,12 +65,6 @@ Deploying the Universal Digital Store means you have a powerful e-commerce tool 
 - Monero Wallet RPC server
 
 ```./monero-wallet-rpc --rpc-bind-ip 0.0.0.0 --rpc-bind-port 18088 --confirm-external-bind --daemon-address 127.0.0.1:18081 --log-file /wallet_rpc.log --disable-rpc-login --wallet-dir ./wallets```
-
-# **UniversalDigitalStore**
-
-A Flask-based digital store with Monero payment integration.
-
----
 
 ## **Setup and Run Instructions**
 
