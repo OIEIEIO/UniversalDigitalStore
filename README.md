@@ -1,20 +1,4 @@
-Browse Products page - start by clicking the Connect to Store button - wait about 30 seconds to connect - then Buy something
-![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20124219.png)
-This is after you click buy button
-![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20150155.png)
-My Orders page - orders can be cancelled at any time until first payment, Cancelled orders disappear in about 20 seconds
-![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20122817.png)
-My Orders page - after 1 confirmation turns orange - notice the cancel button disaappears after one confirmation
-![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20122855.png)
-My Orders page - after 5 confirmations turns green - Download link appears
-![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20124937.png)
-Download page - from confirmed transaction - click download link
-![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20125002.png)
-Flask backend - starting app
-![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20134120.png)
-Feather Wallet app - wallet on the right is store wallet - you do the math on fees - transaction times
-![Store Screenshots](https://github.com/OIEIEIO/UniversalDigitalStore/blob/main/screenshots/Screenshot%202024-07-24%20161620.png)
-## Description
+
 # Universal Digital Store
 
 The Universal Digital Store is a comprehensive e-commerce platform designed for the digital age. This application allows users to purchase digital products securely and privately using Monero. The app not only sells various digital products but also offers the unique opportunity to resell the app itself, providing a robust global e-commerce solution.
@@ -73,8 +57,7 @@ Deploying the Universal Digital Store means you have a powerful e-commerce tool 
 - Place and track orders
 
 ### Prerequisites
-- Ubuntu 20.04 or later
-- Python 3.8 or later
+
 - Monero Wallet RPC server
 
 ```./monero-wallet-rpc --rpc-bind-ip 0.0.0.0 --rpc-bind-port 18088 --confirm-external-bind --daemon-address 127.0.0.1:18081 --log-file /wallet_rpc.log --disable-rpc-login --wallet-dir ./wallets```
