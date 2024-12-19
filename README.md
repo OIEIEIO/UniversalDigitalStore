@@ -1,5 +1,5 @@
 
-# Universal Digital Store 
+# Universal Digital Store - Work in Progress
 
 A Flask-based digital store with Monero payment integration.
 
